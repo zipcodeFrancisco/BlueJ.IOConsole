@@ -1,8 +1,7 @@
-package rocks.zipcode.io.ioconsole;
+ 
 
 import org.junit.Assert;
 import org.junit.Test;
-import rocks.zipcode.io.IOConsole;
 
 import java.io.ByteArrayInputStream;
 import java.util.NoSuchElementException;
