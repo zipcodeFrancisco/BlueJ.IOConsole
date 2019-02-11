@@ -52,6 +52,7 @@ public class PrintTest {
 
     private void test(String outputString, String... stringArguments) {
         // Given
+        //System.out.print('\u000C');
         String expected = String.format(outputString, stringArguments);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         IOConsole console = new IOConsole(System.in, new PrintStream(outputStream));
@@ -59,7 +60,8 @@ public class PrintTest {
         // When
         console.print(outputString, stringArguments);
         String actual = outputStream.toString();
-
+        System.out.println( outputString );
+        System.out.println( stringArguments );        
         // Then
         Assert.assertEquals(expected, actual);
     }

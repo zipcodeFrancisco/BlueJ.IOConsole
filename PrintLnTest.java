@@ -53,8 +53,10 @@ public class PrintLnTest {
     private void test(String outputString, String... stringArguments) {
         // Given
         String expected = String.format(outputString, stringArguments) + "\n";
+        //String expected = String.format(outputString, stringArguments);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         IOConsole console = new IOConsole(System.in, new PrintStream(outputStream));
+        System.out.println( expected.toString() );
 
         // When
         console.println(outputString, stringArguments);
